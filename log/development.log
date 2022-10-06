@@ -34,3 +34,65 @@ Migrating to CreateHabits (20221006035835)
   [1m[36mActiveRecord::InternalMetadata Load (3.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2935717777971003795)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-10-06 15:11:22 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 439)
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | Allocations: 863)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 5651.8ms | Allocations: 185006)
+Completed 200 OK in 5664ms (Views: 5655.5ms | ActiveRecord: 0.0ms | Allocations: 189660)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-06 15:28:31 +1100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 682)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 22882)
+Completed 200 OK in 61ms (Views: 58.8ms | Allocations: 23922)
+
+
+Started GET "/index" for 127.0.0.1 at 2022-10-06 15:33:55 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/habots" for 127.0.0.1 at 2022-10-06 15:35:29 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/habots"):
+  
+Started GET "/habots" for 127.0.0.1 at 2022-10-06 15:35:32 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/habots"):
+  
+Started GET "/habits" for 127.0.0.1 at 2022-10-06 15:35:35 +1100
+  
+SyntaxError (/Users/Ben/code/benschem/streaks/streaks/app/controllers/habits_controller.rb:13: syntax error, unexpected ']', expecting ')'
+...habit = Habit.new(habit_params])
+...                              ^
+):
+  
+app/controllers/habits_controller.rb:13: syntax error, unexpected ']', expecting ')'
+app/controllers/habits_controller.rb:13: syntax error, unexpected ']', expecting ')'
+app/controllers/habits_controller.rb:13: syntax error, unexpected ']', expecting ')'
+Started GET "/habits" for 127.0.0.1 at 2022-10-06 15:36:02 +1100
+Processing by HabitsController#index as HTML
+Completed 401 Unauthorized in 5ms (Allocations: 1767)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-10-06 15:36:03 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 725)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 77.0ms | Allocations: 33811)
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 588)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 214)
+  Rendered layout layouts/application.html.erb (Duration: 98.8ms | Allocations: 56158)
+Completed 200 OK in 327ms (Views: 103.0ms | ActiveRecord: 68.7ms | Allocations: 67104)
+
+

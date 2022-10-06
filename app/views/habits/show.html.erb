@@ -1,0 +1,8 @@
+<h2><%= @habit.name %></h2>
+<p><%= @habit.current_streak %></p>
+<p><%= @habit.longest_streak %></p>
+
+<%= link_to "Delete",
+  habit_path(@habit),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
