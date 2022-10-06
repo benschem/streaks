@@ -1,5 +1,8 @@
 <ul>
   <% @habits.each do |habit| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <li><%= link_to habit.name, habit_path(habit) %></li>
+    <li>🔥 <%= habit.current_streak %> days | 🏆 <%= habit.longest_streak %> days</li>
+    <li>🚫 <%= habit.current_gap %> days | 🏆 <%= habit.longest_gap %> days</li>
+    <li>Completion rate: <%= habit.completion_rate %>%</li>
   <% end %>
 </ul>
