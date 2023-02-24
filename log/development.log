@@ -128,3 +128,49 @@ app/views/pages/home.html.erb:3
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mHabit Create (0.3ms)[0m  [1m[32mINSERT INTO "habits" ("name", "current_streak", "longest_streak", "total_streak", "current_gap", "longest_gap", "total_gap", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Apply for jobs"], ["current_streak", 0], ["longest_streak", 0], ["total_streak", 0], ["current_gap", 0], ["longest_gap", 0], ["total_gap", 0], ["created_at", "2022-10-06 05:38:15.433066"], ["updated_at", "2022-10-06 05:38:15.433066"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2023-02-22 18:07:36 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.2ms | Allocations: 5270)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 5380)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 8749)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `title' for #<ActionView::Base:0x0000000000c968>
+
+'.freeze;@output_buffer.append=( link_to(title, path) );
+                                         ^^^^^):
+    1: <h1>Pages#home</h1>
+    2: <p>Find me in app/views/pages/home.html.erb</p>
+    3: <%= link_to(title, path) %>
+  
+app/views/pages/home.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-02-22 18:14:16 +1100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 147)
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 314.6ms | Allocations: 19586)
+  Rendered shared/_flashes.html.erb (Duration: 1.2ms | Allocations: 251)
+  Rendered layout layouts/application.html.erb (Duration: 464.8ms | Allocations: 80557)
+Completed 200 OK in 485ms (Views: 481.7ms | ActiveRecord: 205.4ms | Allocations: 81458)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-22 20:19:07 +1100
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 183)
+  [1m[36mUser Load (38.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 235.7ms | Allocations: 6943)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 302.1ms | Allocations: 29033)
+Completed 200 OK in 311ms (Views: 308.5ms | ActiveRecord: 118.9ms | Allocations: 30074)
+
+
